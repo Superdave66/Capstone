@@ -22,7 +22,7 @@ namespace Capstones.Controllers
 
                 ViewBag.displayMenu = "No";
 
-                if (isAdminUser())
+                if (IsAdminUser())
                 {
                     ViewBag.displayMenu = "Yes";
                 }
@@ -34,7 +34,7 @@ namespace Capstones.Controllers
             }
             return View();
         }
-        public Boolean isAdminUser()
+        public Boolean IsAdminUser()
         {
             if (User.Identity.IsAuthenticated)
             {

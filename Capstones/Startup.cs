@@ -53,7 +53,7 @@ namespace Capstones
                 if (!roleManager.RoleExists("Tourist"))
                 {
                     var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                    role.Name = "Touist";
+                    role.Name = "Tourist";
                     roleManager.Create(role);
 
                 }
