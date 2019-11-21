@@ -49,7 +49,7 @@ namespace Capstones
                     }
                 }
 
-                // creating Creating Manager role     
+                // creating Creating tourist role     
                 if (!roleManager.RoleExists("Tourist"))
                 {
                     var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
@@ -58,7 +58,7 @@ namespace Capstones
 
                 }
 
-                // creating Creating Employee role     
+                // creating Creating event maker role     
                 if (!roleManager.RoleExists("Event Maker"))
                 {
                     var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();

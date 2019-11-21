@@ -8,6 +8,9 @@ namespace Capstones.Models
 {
     public class Tourist
     {
+      [Key]
+        public int ID { get; set; }
+
         [Display(Name = "City to Search")]
         public string SelectedCity { get; set; }
         [Display(Name = "What are your interests?")]

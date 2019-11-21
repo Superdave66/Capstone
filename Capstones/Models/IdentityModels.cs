@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -24,6 +25,8 @@ namespace Capstones.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+
+        public IEnumerable<object> EventMaker { get; internal set; }
 
         public static ApplicationDbContext Create()
         {
