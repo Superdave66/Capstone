@@ -47,7 +47,7 @@ namespace Capstones.Controllers
                 db.EventMakers.Add(eventMaker);
                 db.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", eventMaker);
             }
             catch
             {
@@ -69,7 +69,7 @@ namespace Capstones.Controllers
             try { 
             eventMaker = db.EventMakers.Where(c => c.ID == ID).FirstOrDefault();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", eventMaker);
         }
            catch 
             {
@@ -95,7 +95,7 @@ namespace Capstones.Controllers
                 db.EventMakers.Remove(eventMaker);
                 db.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", eventMaker);
             }
             catch
             {

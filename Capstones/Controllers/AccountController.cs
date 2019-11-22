@@ -153,11 +153,11 @@ namespace Capstones.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.FirstName, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -169,13 +169,14 @@ namespace Capstones.Controllers
                     if (model.UserRoles == "Tourist")
                     {
                         return RedirectToAction("Create", "Tourist");
+                        
                     }
                     else if (model.UserRoles == "EventMaker")
                     {
                         return RedirectToAction("Create", "EventMaker");
                     }
-                    return RedirectToAction("Index", "Home");
-                }
+                    return RedirectToAction("index", "");
+                }  
             
             ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
                                       .ToList(), "Name", "Name");
@@ -381,7 +382,7 @@ namespace Capstones.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.FirstName, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.FirstName+ model.LastName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

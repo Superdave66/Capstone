@@ -7,13 +7,13 @@ namespace Capstones.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class migration1 : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(migration1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201911221511569_migration1"; }
+            get { return "201911222241278_init"; }
         }
         
         string IMigrationMetadata.Source

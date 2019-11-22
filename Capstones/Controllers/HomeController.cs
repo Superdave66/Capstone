@@ -10,6 +10,7 @@ namespace Capstones.Controllers
     {
         public ActionResult Index()
         {
+          
             return View();
         }
 

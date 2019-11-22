@@ -10,6 +10,7 @@ namespace Capstones.Models
         public string FirstName{ get; set; }
         
         public string Email { get; internal set; }
+        public string LastName { get; internal set; }
     }
 
     public class ExternalLoginListViewModel
