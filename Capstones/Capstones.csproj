@@ -250,11 +250,20 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\users\Index.cshtml" />
+    <Content Include="Views\EventMaker.cshtml" />
+    <Content Include="Views\Tourist\create.cshtml" />
+    <Content Include="Views\Tourist\Delete.cshtml" />
+    <Content Include="Views\Tourist\Details.cshtml" />
+    <Content Include="Views\Tourist\Edit.cshtml" />
+    <Content Include="Views\EventMaker\index.cshtml" />
+    <Content Include="Views\Tourist\index.cshtml" />
+    <Content Include="Views\EventMaker\Create.cshtml" />
+    <Content Include="Views\EventMaker\delete.cshtml" />
+    <Content Include="Views\EventMaker\Edit.cshtml" />
+    <Content Include="Views\EventMaker\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\EventMaker\" />
-    <Folder Include="Views\Tourist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
