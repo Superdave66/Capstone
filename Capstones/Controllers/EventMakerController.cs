@@ -56,18 +56,18 @@ namespace Capstones.Controllers
         }
 
         // GET: EventMaker/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int ID)
         {
-            EventMaker eventMaker = db.EventMakers.Where(c => c.ID == id).FirstOrDefault();
+            EventMaker eventMaker = db.EventMakers.Where(c => c.ID == ID).FirstOrDefault();
             return View(eventMaker);
         }
 
         // POST: EventMaker/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, EventMaker eventMaker)
+        public ActionResult Edit(int ID, EventMaker eventMaker)
         {
             try { 
-            eventMaker = db.EventMakers.Where(c => c.ID == id).FirstOrDefault();
+            eventMaker = db.EventMakers.Where(c => c.ID == ID).FirstOrDefault();
 
             return RedirectToAction("Index");
         }
@@ -78,24 +78,28 @@ namespace Capstones.Controllers
 }
 
         // GET: EventMaker/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int ID)
         {
-            return View();
+            EventMaker eventMaker= db.EventMakers.Where(c => c.ID == ID).FirstOrDefault();
+            return View(eventMaker);
         }
 
         // POST: EventMaker/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int ID, EventMaker eventMaker)
         {
             try
             {
                 // TODO: Add delete logic here
+                eventMaker = db.EventMakers.Where(c => c.ID == ID).FirstOrDefault();
+                db.EventMakers.Remove(eventMaker);
+                db.SaveChanges();
 
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View(ID);
             }
         }
     }
