@@ -21,12 +21,14 @@ namespace Capstones.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<EventMaker> EventMakers { get; set; }
+        public DbSet<Tourist> Tourists { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        public IEnumerable<object> EventMaker { get; internal set; }
+       
 
         public static ApplicationDbContext Create()
         {

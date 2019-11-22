@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -15,5 +16,9 @@ namespace Capstones.Models
         public string SelectedCity { get; set; }
         [Display(Name = "What are your interests?")]
         public List<string> Interests { get; set; }
+        [ForeignKey("UserName")]
+public string UserName { get; set; }
+
+        public virtual Tourist tourist { get; set; }
     }
 }

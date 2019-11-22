@@ -50,7 +50,7 @@ namespace Capstones.Models
     {
         [Required]
         [Display(Name = "UserName")]
-        [EmailAddress]
+       
         public string UserName { get; set; }
 
         [Required]
@@ -73,9 +73,7 @@ namespace Capstones.Models
         [Required]
         [Display(Name = "Contact Number")]
         public string ContactNumber { get; set; }
-        [Required]
-        [Display(Name = "User Name")]
-        public string UserName { get; set; }
+        
 
         [Required]
         [Display(Name = "UserRoles")]
