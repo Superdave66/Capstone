@@ -7,7 +7,9 @@ namespace Capstones.Models
     {
         [Required]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string FirstName{ get; set; }
+        
+        public string Email { get; internal set; }
     }
 
     public class ExternalLoginListViewModel

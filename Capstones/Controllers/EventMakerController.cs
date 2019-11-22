@@ -67,7 +67,7 @@ namespace Capstones.Controllers
         public ActionResult Edit(int id, EventMaker eventMaker)
         {
             try { 
-            EventMaker dbeventMaker = db.EventMakers.Where(c => c.ID == id).FirstOrDefault();
+            eventMaker = db.EventMakers.Where(c => c.ID == id).FirstOrDefault();
 
             return RedirectToAction("Index");
         }

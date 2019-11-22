@@ -16,9 +16,6 @@ namespace Capstones.Models
         public string SelectedCity { get; set; }
         [Display(Name = "What are your interests?")]
         public List<string> Interests { get; set; }
-        [ForeignKey("UserName")]
-public string UserName { get; set; }
-
-        public virtual Tourist tourist { get; set; }
+      
     }
 }

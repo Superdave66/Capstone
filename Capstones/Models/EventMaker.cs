@@ -11,9 +11,6 @@ namespace Capstones.Models
     {
         [Key]
         public int ID { get; set; }
-        [ForeignKey("UserName")]
-        public string UserName { get; set; }
-
-        public virtual EventMaker eventMaker{ get; set; }
+       
     }
 }
