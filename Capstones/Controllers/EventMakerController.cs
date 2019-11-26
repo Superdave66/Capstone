@@ -18,7 +18,7 @@ namespace Capstones.Controllers
         public ActionResult Index()
         {
             List<EventMaker> eventMakers = db.EventMakers.ToList();
-            return View();
+            return View(eventMakers);
         }
 
         // GET: EventMaker/Details/5
@@ -30,7 +30,7 @@ namespace Capstones.Controllers
         }
 
         // GET: EventMaker/Create
-        public ActionResult Create()
+        public ActionResult  Create()
         {
 
             EventMaker eventMaker = new EventMaker();
@@ -47,7 +47,7 @@ namespace Capstones.Controllers
                 db.EventMakers.Add(eventMaker);
                 db.SaveChanges();
 
-                return RedirectToAction("Index", eventMaker);
+                return RedirectToAction("Index", "EventMaker");
             }
             catch
             {
@@ -67,9 +67,13 @@ namespace Capstones.Controllers
         public ActionResult Edit(int ID, EventMaker eventMaker)
         {
             try { 
-            eventMaker = db.EventMakers.Where(c => c.ID == ID).FirstOrDefault();
+           EventMaker dbEventMaker = db.EventMakers.Where(c => c.ID == ID).FirstOrDefault();
+                dbEventMaker.FirstName = eventMaker.FirstName;
+                dbEventMaker.LastName = eventMaker.LastName;
+                db.SaveChanges();
 
-            return RedirectToAction("Index", eventMaker);
+
+                return RedirectToAction("Index");
         }
            catch 
             {

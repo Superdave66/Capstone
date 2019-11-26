@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Capstones.Models;
+using static Capstones.Models.RegisterViewModel;
 
 namespace Capstones.Controllers
 {
@@ -153,7 +154,7 @@ namespace Capstones.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -171,16 +172,16 @@ namespace Capstones.Controllers
                         return RedirectToAction("Create", "Tourist");
                         
                     }
-                    else if (model.UserRoles == "EventMaker")
+                    else if (model.UserRoles == "Event Maker")
                     {
                         return RedirectToAction("Create", "EventMaker");
                     }
-                    return RedirectToAction("index", "");
+                  
                 }  
             
-            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
+                ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
                                       .ToList(), "Name", "Name");
-            AddErrors(result);
+                AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
@@ -382,7 +383,7 @@ namespace Capstones.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.FirstName+ model.LastName, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

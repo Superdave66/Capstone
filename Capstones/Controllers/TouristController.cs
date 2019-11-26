@@ -19,8 +19,10 @@ namespace Capstones.Controllers
             // GET: Tourist
             public ActionResult Index()
         {
-            List<Tourist> Tourists = db.Tourists.ToList();
-            return View();
+            List<Tourist> tourists1 = db.Tourists.ToList();
+            
+             
+            return View(tourists1);
         }
 
         // GET: Tourist/Details/5
@@ -46,12 +48,12 @@ namespace Capstones.Controllers
                 db.Tourists.Add(tourist);
                 db.SaveChanges();
                 // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                
+                return RedirectToAction("Index", "tourist");
             }
             catch
             {
-                return View();
+                return View(tourist);
             }
         }
 
@@ -59,6 +61,7 @@ namespace Capstones.Controllers
         public ActionResult Edit(int ID)
         {
             Tourist tourist = db.Tourists.Where(c => c.ID == ID).FirstOrDefault();
+            //var viewModel = new vm() { tourist = tourist };
             return View(tourist);
         }
 
@@ -71,6 +74,9 @@ namespace Capstones.Controllers
                 Tourist DBtourist = db.Tourists.Where(c => c.ID == ID).FirstOrDefault();
                 DBtourist.SelectedCity = tourist.SelectedCity;
                 DBtourist.Interests = tourist.Interests;
+                DBtourist.FirstName = tourist.FirstName;
+                DBtourist.LastName = tourist.LastName;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
