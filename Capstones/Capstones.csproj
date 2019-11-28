@@ -162,6 +162,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIKeys.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -195,6 +196,18 @@
     <Compile Include="Migrations\201911260137473_4.cs" />
     <Compile Include="Migrations\201911260137473_4.Designer.cs">
       <DependentUpon>201911260137473_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911262042437_changedwordingforinterst.cs" />
+    <Compile Include="Migrations\201911262042437_changedwordingforinterst.Designer.cs">
+      <DependentUpon>201911262042437_changedwordingforinterst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911262044599_changedwordingforinterst1.cs" />
+    <Compile Include="Migrations\201911262044599_changedwordingforinterst1.Designer.cs">
+      <DependentUpon>201911262044599_changedwordingforinterst1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911272021053_addedstatesearchtotourist.cs" />
+    <Compile Include="Migrations\201911272021053_addedstatesearchtotourist.Designer.cs">
+      <DependentUpon>201911272021053_addedstatesearchtotourist.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -305,6 +318,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911260137473_4.resx">
       <DependentUpon>201911260137473_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911262042437_changedwordingforinterst.resx">
+      <DependentUpon>201911262042437_changedwordingforinterst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911262044599_changedwordingforinterst1.resx">
+      <DependentUpon>201911262044599_changedwordingforinterst1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911272021053_addedstatesearchtotourist.resx">
+      <DependentUpon>201911272021053_addedstatesearchtotourist.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

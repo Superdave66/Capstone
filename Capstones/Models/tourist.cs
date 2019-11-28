@@ -15,9 +15,14 @@ namespace Capstones.Models
         public string FirstName { get; set; }
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        [Display(Name = "City to Search")]
+        [Display(Name = "what city do you wish to search?")]
+        
+
         public string SelectedCity { get; set; }
-        [Display(Name = "What are your interests?")]
+        [Display(Name = "what state do you wish to search?")]
+        public string SelectedState { get; set; }
+
+        [Display(Name = "what 1 interest do you wish to search with?")]
         
         public string Interests { get; set; }
         [ForeignKey("ApplicationUser")]
