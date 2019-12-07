@@ -10,8 +10,7 @@ namespace Capstones.Controllers
 {
     public class TouristController : Controller
     {
-
-        ApplicationDbContext db;
+         ApplicationDbContext db;
         
 
         public TouristController()

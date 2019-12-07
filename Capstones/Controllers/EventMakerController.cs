@@ -1,4 +1,5 @@
 ﻿using Capstones.Models;
+using EventbriteNET;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,14 @@ namespace Capstones.Controllers
 {
     public class EventMakerController : Controller
     {
-        ApplicationDbContext db;
+         ApplicationDbContext db;
         public EventMakerController()
         {
+           
             db = new ApplicationDbContext();
+            ViewBag.ClinetID = APIKeys.ClientID;
+            ViewBag.CalendarSeceret = APIKeys.CalendarSeceret;
+        
         }
         // GET: EventMaker
         public ActionResult Index()

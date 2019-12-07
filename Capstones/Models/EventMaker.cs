@@ -19,6 +19,6 @@ namespace Capstones.Models
 
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }
-        public ApplicationUser ApplicationUser { get=> ApplicationUser; set=> ApplicationId= ApplicationUser; }
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }
