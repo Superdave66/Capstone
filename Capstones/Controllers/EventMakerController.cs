@@ -17,7 +17,7 @@ namespace Capstones.Controllers
             db = new ApplicationDbContext();
             ViewBag.ClinetID = APIKeys.ClientID;
             ViewBag.CalendarSeceret = APIKeys.CalendarSeceret;
-        
+            
         }
         // GET: EventMaker
         public ActionResult Index()

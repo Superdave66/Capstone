@@ -31,6 +31,7 @@ namespace Capstones.Models
     {
         public DbSet<EventMaker> EventMakers { get; set; }
         public DbSet<Tourist> Tourists { get; set; }
+        public DbSet<Events> Events { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

@@ -20,7 +20,7 @@ namespace Capstones.Controllers
 
             ViewBag.Interest = db.Tourists.Where(C => C.ApplicationUser == C.ApplicationUser).Select(C => C.Interests).FirstOrDefault();
             ViewBag.StateTOSearch = db.Tourists.Where(C => C.ApplicationUser == C.ApplicationUser).Select(C => C.SelectedState).FirstOrDefault();
-
+            
 
             ViewBag.CityTOSearch = db.Tourists.Where(C => C.ApplicationUser == C.ApplicationUser).Select(C => C.SelectedCity).FirstOrDefault();
         
