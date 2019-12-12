@@ -10,7 +10,7 @@ namespace Capstones.Models
     public class Events
     {
         [Key]
-        public int Id;
+        public int Id { get; set; }
         [Display (Name ="Location of Event")]
         public string Location { get; set; }
         [Display(Name ="Date and Time of Event")]
@@ -18,9 +18,9 @@ namespace Capstones.Models
 
         [Display(Name ="number of Attendess")]
         public  int Attendees { get; set; }
-        [ForeignKey ("EventID")]
-        public string ApplicationID { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
+        //[ForeignKey("EventId")]
+        //public string ApplicationId { get; set; }
+        //public ApplicationDbContext ApplicationDbContext { get; set; }
 
 
     }

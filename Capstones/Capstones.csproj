@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201911272021053_addedstatesearchtotourist.Designer.cs">
       <DependentUpon>201911272021053_addedstatesearchtotourist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912120010591_events1.cs" />
+    <Compile Include="Migrations\201912120010591_events1.Designer.cs">
+      <DependentUpon>201912120010591_events1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EventMaker.cs" />
@@ -318,10 +322,14 @@
     <Content Include="Views\EventMaker\Details.cshtml" />
     <Content Include="Views\Tourist\index.cshtml" />
     <Content Include="Views\EventMaker\Index.cshtml" />
+    <Content Include="Views\Events\index.cshtml" />
+    <Content Include="Views\Events\create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Events\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -360,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911272021053_addedstatesearchtotourist.resx">
       <DependentUpon>201911272021053_addedstatesearchtotourist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912120010591_events1.resx">
+      <DependentUpon>201912120010591_events1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
