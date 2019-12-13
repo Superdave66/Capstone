@@ -11,16 +11,19 @@ namespace Capstones.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display (Name ="Location of Event")]
-        public string Location { get; set; }
-        [Display(Name ="Date and Time of Event")]
-        public DateTime DateTImeOfEvent { get; set; }
+        [Display(Name ="Name of Event")]
+        public string NameOfEvent { get; set; }
 
-        [Display(Name ="number of Attendess")]
+        [Display(Name ="Date and Time of Event")]
+        public DateTime? DateTImeOfEvent { get; set; }
+
+        [Display(Name ="Number of Attendess")]
         public  int Attendees { get; set; }
-        //[ForeignKey("EventId")]
-        //public string ApplicationId { get; set; }
-        //public ApplicationDbContext ApplicationDbContext { get; set; }
+        [Display(Name ="Interest to Assiocate Event to")]
+        public string KeyWord { get; set; }
+        [ForeignKey("Address")]
+        public Address Address  { get; set; }
+        public ApplicationDbContext ApplicationDbContext { get; set; }
 
 
     }

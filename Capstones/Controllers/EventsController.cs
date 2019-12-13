@@ -20,14 +20,15 @@ namespace Capstones.Controllers
         // GET: Events
         public ActionResult Index()
         {
-            return View();
+            List<Events> events = db.Events.ToList();
+            return View(events);
         }
 
         // GET: Events/Details/5
         public ActionResult Details(int Id)
         {
-            Events events = db.Events.Where(e => e.Id == Id).FirstOrDefault();
-            return View(events);
+            Events Event = db.Events.Where(e => e.Id == Id).FirstOrDefault();
+            return View(Event);
         }
 
         // GET: Events/Create
@@ -69,7 +70,7 @@ namespace Capstones.Controllers
             {
                 // TODO: Add update logic here
                 Events DbEvents = db.Events.Where(c => c.Id == Id).FirstOrDefault();
-                DbEvents.Location = Event.Location;
+               
                 DbEvents.DateTImeOfEvent = Event.DateTImeOfEvent;
                 DbEvents.Attendees = Event.Attendees;
                 db.SaveChanges();
